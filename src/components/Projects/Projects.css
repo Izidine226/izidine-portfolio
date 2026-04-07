@@ -116,10 +116,30 @@
   opacity: 1;
 }
 
+.project-card__bg-emoji {
+  position: absolute;
+  right: -20px;
+  bottom: -40px;
+  font-size: 12rem;
+  opacity: 0.04;
+  transition: transform 0.5s ease, opacity 0.5s ease, filter 0.5s ease;
+  z-index: 0;
+  pointer-events: none;
+  filter: blur(2px);
+}
+
+.project-card:hover .project-card__bg-emoji {
+  transform: scale(1.15) rotate(-15deg);
+  opacity: 0.12;
+  filter: blur(6px);
+}
+
 .project-card__top {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  position: relative;
+  z-index: 1;
 }
 
 .project-card__icon-wrapper {
@@ -162,6 +182,8 @@
 
 .project-card__content {
   flex: 1;
+  position: relative;
+  z-index: 1;
 }
 
 .project-card__category {
@@ -191,6 +213,8 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.4rem;
+  position: relative;
+  z-index: 1;
 }
 
 .project-tag {
@@ -220,6 +244,8 @@
   opacity: 0;
   transform: translateY(5px);
   transition: all 0.3s;
+  position: relative;
+  z-index: 1;
 }
 
 .project-card:hover .project-card__arrow {

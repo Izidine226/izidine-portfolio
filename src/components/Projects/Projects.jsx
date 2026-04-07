@@ -245,6 +245,9 @@ export default function Projects() {
                 transition={{ duration: 0.4, delay: idx * 0.05 }}
                 onClick={() => setSelectedProject(project)}
               >
+                <div className="project-card__bg-emoji">
+                  {project.emoji}
+                </div>
                 <div className="project-card__bg" style={{ background: project.gradient }} />
 
                 <div className="project-card__top">
