@@ -1,0 +1,77 @@
+Développeur Full Stack junior et Intégrateur IA passionné
+📍 Toulouse, France | 📱 06 21 58 99 88 | 📧 nebieizidinemagid@gmail.com     
+ Linkedin |     github | 🚗 Permis B (Véhiculé)
+EXPÉRIENCES PROFESSIONNELLES
+2022 – 2025 | Équipier Polyvalent McDonald's, Tournefeuille
+Fiabilité et rigueur : Gestion des process en autonomie et respect des
+standards.
+Gestion du stress : Efficacité et priorisation des tâches en période de
+"RUSH".
+Travail d'équipe : Coordination permanente avec les autres équipiers
+pour assurer la fluidité du service. Utilisation d'outils informatiques de
+gestion des commandes et des stocks. 
+Parcours : Génie Logiciel, Systèmes d'exploitation, Bases de Données,
+Algorithmique avancée.
+COMPÉTENCES TECHNIQUES
+PROFIL
+IZIDINE NEBIÉ
+FORMATIONS
+2023 – Présent |Licence 3 MIASHS (Spécialité Informatique)
+Université Toulouse - Jean Jaurès
+PROJETS PERSONNELS ET ACADÉMIQUES
+Simulateur d'Entretien IA (Projet Universitaire)
+Développement du serveur back-end (Node.js, Express) pour un outil
+de simulation d'entretien connecté à un LLM.
+Conception et déploiement d'une base de données MySQL (locale et
+en ligne sur Railway).
+Implémentation d'un système d'authentification sécurisé (JWT, hachage
+bcrypt).
+Connexion à l'API OpenAI (ChatGPT) pour la génération dynamique de
+questions.
+Gestion de projet et versioning en équipe avec Git et GitHub.
+Système Domotique IoT (Projet Personnel)
+Scripting Python pour l'automatisation de tâches et le pilotage de
+matériel.
+Création d'une interface de contrôle locale pour interagir avec des
+objets connectés.
+Étudiant en L3 Informatique ,je
+conçois et développe des
+applications web modernes, en
+combinant mon profil Full Stack avec
+l'intégration d'intelligences
+artificielles. Transformons vos idées
+en réalité digitale augmentée.
+Mon approche combine les dernières
+technologies web avec les outils IA
+pour construire des produits innovants
+qui repoussent les limites.
+Développement Web (Bonnes
+connaissances) :
+Front-End : JavaScript (ES6+),
+React.js, Tailwind CSS,
+HTML5/CSS3.
+Back-End : Node.js, Express.js, API
+REST.
+Bases de Données : MongoDB
+(Mongoose), MySQL, PostgreSQL
+(Notions).
+Socle Académique (Université) :
+Langages : Java, C++, Python,
+Algorithmique, PHP.
+Concepts : Programmation
+Orientée Objet, Structures de
+données.
+Outils & DevOps :
+Vers. & Déploiement : Git,
+GitHub, Vercel, Railway.
+Conteneurisation : Docker 
+Outils : Postman, VS Code.
+Langues :
+Anglais :Technique (Lecture doc).
+Juin - Août 2021 | Assistant Informatique (Job d'été) |  
+Société de commerce - Ouagadougou, Burkina Faso
+Installation : Préparation des ordinateurs et des logiciels pour l'équipe.
+Dépannage : Résolution rapide des problèmes quotidiens (internet,
+imprimantes, mots de passe).
+Accompagnement : Aide et explication des outils informatiques aux
+collègues.
