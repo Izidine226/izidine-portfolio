@@ -12,6 +12,7 @@ const experiences = [
     location: 'Toulouse, France',
     type: 'Job étudiant',
     color: '#8b5cf6',
+    emoji: '🍔',
     description: 'Gestion du stress en période de rush, travail d\'équipe et rigueur au sein d\'un environnement de restauration rapide.',
     highlights: [
       'Gestion efficace du stress en forte affluence',
@@ -27,6 +28,7 @@ const experiences = [
     location: 'Colomiers, France',
     type: 'Stage',
     color: '#3b82f6',
+    emoji: '📄',
     description: 'Traitement numérique des informations, tri et organisation des dossiers, et accompagnement du public.',
     highlights: [
       'Utilisation quotidienne des systèmes d\'information et des logiciels professionnels',
@@ -42,6 +44,7 @@ const experiences = [
     location: 'Toulouse, France',
     type: 'Bénévolat',
     color: '#10b981',
+    emoji: '🤝',
     description: 'Accompagnement personnalisé d\'un jeune pour favoriser son développement et son épanouissement.',
     highlights: [
       'Accompagnement d\'un usager dans son parcours',
@@ -58,6 +61,7 @@ const experiences = [
     location: 'Burkina Faso',
     type: 'Job d\'été',
     color: '#06b6d4',
+    emoji: '💻',
     description: 'Aide technique, dépannage et installation de logiciels sur site. Assister les utilisateurs au quotidien pour résoudre leurs problèmes IT.',
     highlights: [
       'Support technique et aide aux utilisateurs',
@@ -138,6 +142,9 @@ export default function Experience() {
                 <div className="exp-card__dot" style={{ background: exp.color, boxShadow: `0 0 15px ${exp.color}80` }} />
 
                 <div className="exp-card__content glass-card">
+                  <div className="exp-card__bg-emoji">
+                    {exp.emoji}
+                  </div>
                   <div className="exp-card__header">
                     <div>
                       <div className="exp-card__meta">
