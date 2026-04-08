@@ -10,7 +10,7 @@ const projects = [
     category: 'IA',
     tags: ['Node.js', 'Express', 'MySQL', 'OpenAI'],
     description: 'Outil innovant pour s\'entraîner aux entretiens d\'embauche avec ChatGPT générant des questions sur mesure.',
-    longDesc: 'Système complet de simulation d\'entretien. Le backend en Node.js/Express se connecte à l\'API OpenAI (ChatGPT) pour générer des questions dynamiquement. La sécurité est assurée par un système d\'authentification JWT et hachage bcrypt.',
+    longDesc: 'Un simulateur d\'entretien 100 % vocal : vous parlez, et l\'IA vous écoute et vous répond de vive voix, comme un vrai recruteur ! Derrière, une technologie solide (Node.js / OpenAI) et un système d\'authentification totalement sécurisé protègent vos données.',
     color: '#8b5cf6',
     gradient: 'linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%)',
     emoji: '🤖',
