@@ -17,6 +17,7 @@ export default function Hero3D() {
       <iframe 
         src="https://my.spline.design/designeffectscopycopy-AEioS5wuQfuLZAf3f97X5sjB-lOB/" 
         frameBorder="0" 
+        loading="lazy"
         style={{ 
           position: 'absolute',
           top: '-50px', // Remonte l'iframe pour compenser la taille

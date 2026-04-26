@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV — Izidine Nébié</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box; margin: 0; padding: 0;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+    @page { size: A4; margin: 0; }
+
+    :root {
+      --purple: #8b5cf6;
+      --purple-dark: #4c1d95;
+      --cyan: #06b6d4;
+      --amber: #f59e0b;
+      --green: #10b981;
+      --pink: #ec4899;
+      --dark: #0f0f1a;
+      --card: #1a1a2e;
+      --card2: #16213e;
+      --border: rgba(255,255,255,0.07);
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+    }
+
+    html, body {
+      font-family: 'Inter', sans-serif;
+      background: #050510;
+      color: var(--text);
+      font-size: 20px;
+      line-height: 1.6;
+    }
+
+    /* ── SCREEN : large readable layout ── */
+    .page {
+      width: 100%;
+      max-width: 1200px;
+      min-height: 100vh;
+      margin: 0 auto;
+      background-color: #0f0f1a !important;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── PRINT : A4 compact ── */
+    @media print {
+      html, body { font-size: 10px; }
+      .page {
+        width: 210mm;
+        max-width: 210mm;
+        min-height: 297mm;
+        max-height: 297mm;
+        margin: 0;
+        box-shadow: none;
+        overflow: hidden;
+      }
+    }
+
+    /* ════ HEADER ════ */
+    .header {
+      background-image: linear-gradient(135deg, #1e1b4b 0%, #0c4a6e 60%, #164e63 100%) !important;
+      padding: 18px 24px 14px;
+      position: relative;
+      overflow: hidden;
+    }
+    .header::before {
+      content: '';
+      position: absolute;
+      top: -50px; right: -50px;
+      width: 180px; height: 180px;
+      background-color: rgba(139,92,246,0.18) !important;
+      border-radius: 50%;
+    }
+    .header::after {
+      content: '';
+      position: absolute;
+      bottom: -30px; left: 30%;
+      width: 120px; height: 120px;
+      background-color: rgba(6,182,212,0.12) !important;
+      border-radius: 50%;
+    }
+
+    .header-top { display: flex; align-items: flex-start; gap: 20px; position: relative; z-index: 2; }
+
+    .avatar {
+      width: 96px; height: 96px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid rgba(196,181,253,0.6) !important;
+      flex-shrink: 0;
+      display: block;
+      position: relative;
+      z-index: 3;
+      box-shadow: 0 0 0 4px rgba(139,92,246,0.25), 0 0 24px rgba(139,92,246,0.4) !important;
+    }
+
+    .header-info { flex: 1; position: relative; z-index: 2; }
+    .header-name {
+      font-size: 2rem; font-weight: 800;
+      color: white; letter-spacing: -0.5px; line-height: 1.1;
+    }
+    .header-name span { color: #c4b5fd; }
+    .header-role { font-size: 0.88rem; color: rgba(255,255,255,0.78); font-weight: 500; margin: 4px 0 8px; }
+
+    .header-badges { display: flex; flex-wrap: wrap; gap: 6px; }
+    .badge {
+      font-size: 0.72rem; font-weight: 700;
+      padding: 3px 10px; border-radius: 99px;
+      color: white;
+    }
+    .badge-default { background-color: rgba(255,255,255,0.12) !important; border: 1px solid rgba(255,255,255,0.2) !important; }
+    .badge-amber   { background-color: rgba(245,158,11,0.3)  !important; border: 1px solid rgba(245,158,11,0.5)  !important; }
+    .badge-green   { background-color: rgba(16,185,129,0.3)  !important; border: 1px solid rgba(16,185,129,0.5)  !important; }
+    .badge-pink    { background-color: rgba(236,72,153,0.3)  !important; border: 1px solid rgba(236,72,153,0.5)  !important; }
+
+    .header-contacts {
+      display: flex; flex-wrap: wrap; gap: 8px 18px;
+      font-size: 0.82rem; color: rgba(255,255,255,0.75);
+      margin-top: 12px; position: relative; z-index: 1;
+    }
+    .header-contacts a { color: #c4b5fd; text-decoration: none; }
+
+    .header-links {
+      display: flex; flex-wrap: wrap; gap: 7px;
+      margin-top: 10px; position: relative; z-index: 1;
+    }
+    .hlink {
+      font-size: 0.76rem; font-weight: 700;
+      padding: 4px 12px; border-radius: 99px;
+      text-decoration: none; color: white;
+    }
+    .hlink-purple { background-color: rgba(139,92,246,0.35) !important; border: 1px solid rgba(139,92,246,0.6) !important; }
+    .hlink-cyan   { background-color: rgba(6,182,212,0.30)  !important; border: 1px solid rgba(6,182,212,0.55)  !important; }
+    .hlink-amber  { background-color: rgba(245,158,11,0.30) !important; border: 1px solid rgba(245,158,11,0.55) !important; }
+    .hlink-green  { background-color: rgba(16,185,129,0.30) !important; border: 1px solid rgba(16,185,129,0.55) !important; }
+
+    /* ════ OBJECTIVE BAND ════ */
+    .objective {
+      background-color: rgba(139,92,246,0.12) !important;
+      border-left: 3px solid #8b5cf6 !important;
+      padding: 7px 16px;
+      font-size: 0.7rem;
+      color: #c4b5fd;
+      line-height: 1.5;
+    }
+    .objective strong { color: #a78bfa; }
+
+    /* ════ BODY ════ */
+    .body {
+      display: grid;
+      grid-template-columns: 1fr 230px;
+      align-items: start;
+    }
+
+    .main { padding: 20px 20px 20px 28px; border-right: 1px solid var(--border) !important; }
+    .side { padding: 20px 18px; background-color: rgba(255,255,255,0.02) !important; }
+
+    /* ════ SECTION TITLES ════ */
+    .section { margin-bottom: 18px; }
+    .section:last-child { margin-bottom: 0; }
+
+    .section-title {
+      font-size: 0.7rem; font-weight: 800;
+      letter-spacing: 0.13em; text-transform: uppercase;
+      color: var(--purple);
+      display: flex; align-items: center; gap: 6px;
+      margin-bottom: 10px;
+    }
+    .section-title::after {
+      content: ''; flex: 1; height: 1px;
+      background-color: rgba(139,92,246,0.25) !important;
+    }
+
+    /* ════ EXP CARDS ════ */
+    .exp { margin-bottom: 10px; padding: 10px 13px; border-radius: 8px; }
+    .exp-purple { background-color: rgba(139,92,246,0.08) !important; border-left: 3px solid #8b5cf6 !important; }
+    .exp-pink   { background-color: rgba(236,72,153,0.08) !important; border-left: 3px solid #ec4899 !important; }
+    .exp-cyan   { background-color: rgba(6,182,212,0.08)  !important; border-left: 3px solid #06b6d4  !important; }
+    .exp-green  { background-color: rgba(16,185,129,0.08) !important; border-left: 3px solid #10b981  !important; }
+
+    .exp-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 4px; }
+    .exp-role   { font-weight: 700; font-size: 0.9rem; color: white; }
+    .exp-period { font-size: 0.75rem; color: var(--muted); font-weight: 600; white-space: nowrap; }
+    .exp-company { font-size: 0.78rem; color: var(--muted); margin: 2px 0 5px; }
+    .exp-company strong { color: var(--purple); }
+    .exp-points { list-style: none; padding: 0; }
+    .exp-points li {
+      font-size: 0.82rem; color: #94a3b8;
+      padding-left: 13px; position: relative;
+      margin-bottom: 3px; line-height: 1.4;
+    }
+    .exp-points li::before {
+      content: '▸'; position: absolute; left: 0;
+      color: var(--purple); font-size: 0.7rem; top: 1px;
+    }
+
+    /* ════ PROJECTS ════ */
+    .proj-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .proj {
+      padding: 10px 12px; border-radius: 7px;
+      background-color: rgba(255,255,255,0.03) !important;
+      border: 1px solid rgba(255,255,255,0.07) !important;
+    }
+    .proj-header { display: flex; justify-content: space-between; align-items: center; gap: 4px; margin-bottom: 3px; }
+    .proj-title  { font-weight: 700; font-size: 0.85rem; color: white; }
+    .proj-link   { font-size: 0.7rem; color: var(--purple); text-decoration: none; font-weight: 700; white-space: nowrap; }
+    .proj-desc   { font-size: 0.78rem; color: var(--muted); line-height: 1.4; margin-bottom: 5px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 4px; }
+    .tag { font-size: 0.68rem; font-weight: 600; padding: 2px 7px; border-radius: 4px; }
+    .tag-p { background-color: rgba(139,92,246,0.18) !important; color: #c4b5fd; border: 1px solid rgba(139,92,246,0.3) !important; }
+    .tag-c { background-color: rgba(6,182,212,0.15)  !important; color: #67e8f9; border: 1px solid rgba(6,182,212,0.3)  !important; }
+    .tag-a { background-color: rgba(245,158,11,0.15) !important; color: #fcd34d; border: 1px solid rgba(245,158,11,0.3) !important; }
+    .tag-g { background-color: rgba(16,185,129,0.15) !important; color: #6ee7b7; border: 1px solid rgba(16,185,129,0.3) !important; }
+    .tag-k { background-color: rgba(236,72,153,0.15) !important; color: #f9a8d4; border: 1px solid rgba(236,72,153,0.3) !important; }
+
+    /* ════ SIDEBAR ════ */
+    .side-section { margin-bottom: 13px; }
+    .side-title {
+      font-size: 0.65rem; font-weight: 800;
+      text-transform: uppercase; letter-spacing: 0.1em;
+      color: var(--muted); margin-bottom: 6px;
+      border-bottom: 1px solid rgba(255,255,255,0.07) !important;
+      padding-bottom: 4px;
+    }
+
+    .profil-text { font-size: 0.82rem; color: #94a3b8; line-height: 1.55; }
+    .profil-text strong { color: #c4b5fd; }
+
+    /* Stats */
+    .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; }
+    .stat-box {
+      text-align: center; padding: 7px 4px;
+      background-color: rgba(139,92,246,0.12) !important;
+      border: 1px solid rgba(139,92,246,0.2) !important;
+      border-radius: 6px;
+    }
+    .stat-val { font-size: 1.1rem; font-weight: 800; color: var(--purple); }
+    .stat-lbl { font-size: 0.62rem; color: #a78bfa; font-weight: 600; }
+
+    /* Skills */
+    .skill-group { margin-bottom: 8px; }
+    .skill-group-name { font-size: 0.7rem; font-weight: 700; color: #cbd5e1; margin-bottom: 4px; }
+    .pills { display: flex; flex-wrap: wrap; gap: 4px; }
+    .pill {
+      font-size: 0.68rem; font-weight: 500;
+      padding: 2px 8px; border-radius: 4px;
+    }
+    .pill-p { background-color: rgba(139,92,246,0.18) !important; color: #c4b5fd; border: 1px solid rgba(139,92,246,0.3) !important; }
+    .pill-c { background-color: rgba(6,182,212,0.15)  !important; color: #67e8f9; border: 1px solid rgba(6,182,212,0.3)  !important; }
+    .pill-a { background-color: rgba(245,158,11,0.15) !important; color: #fcd34d; border: 1px solid rgba(245,158,11,0.3) !important; }
+    .pill-g { background-color: rgba(16,185,129,0.15) !important; color: #6ee7b7; border: 1px solid rgba(16,185,129,0.3) !important; }
+    .pill-k { background-color: rgba(236,72,153,0.15) !important; color: #f9a8d4; border: 1px solid rgba(236,72,153,0.3) !important; }
+    .pill-d { background-color: rgba(255,255,255,0.06) !important; color: #cbd5e1; border: 1px solid rgba(255,255,255,0.1) !important; }
+
+    /* Education (main column - horizontal) */
+    .edu-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+    .edu-card {
+      padding: 10px 12px; border-radius: 7px;
+      background-color: rgba(139,92,246,0.07) !important;
+      border-left: 3px solid #8b5cf6 !important;
+    }
+    .edu { margin-bottom: 7px; }
+    .edu-period { font-size: 0.7rem; font-weight: 700; color: var(--purple); }
+    .edu-degree { font-size: 0.82rem; font-weight: 700; color: white; }
+    .edu-school { font-size: 0.72rem; color: var(--muted); }
+
+    /* Languages */
+    .lang { margin-bottom: 7px; }
+    .lang-row { display: flex; justify-content: space-between; }
+    .lang-name { font-size: 0.82rem; font-weight: 600; color: #e2e8f0; }
+    .lang-lvl  { font-size: 0.72rem; color: var(--muted); }
+    .lang-bar  { height: 3px; background-color: rgba(255,255,255,0.08) !important; border-radius: 99px; margin-top: 2px; overflow: hidden; }
+    .lang-fill { height: 100%; border-radius: 99px; }
+    .fill-p { background-color: #8b5cf6 !important; }
+    .fill-c { background-color: #06b6d4 !important; }
+    .fill-a { background-color: #f59e0b !important; }
+
+    /* Interests */
+    .int-pill {
+      font-size: 0.7rem; padding: 3px 8px; border-radius: 4px;
+      background-color: rgba(255,255,255,0.06) !important;
+      border: 1px solid rgba(255,255,255,0.1) !important;
+      color: #cbd5e1;
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ═══ HEADER ═══ -->
+  <header class="header">
+    <div class="header-top">
+      <img src="/izidine.jpg" alt="Izidine Nébié" class="avatar" onerror="this.style.display='none'" />
+      <div class="header-info">
+        <div class="header-name">Izidine <span>Nébié</span></div>
+        <div class="header-role">Développeur Full Stack &amp; Intégrateur IA · Créateur de Contenu Digital</div>
+        <div class="header-badges">
+          <span class="badge badge-amber">🤖 IA &amp; Automatisation</span>
+          <span class="badge badge-pink">📱 +120k abonnés cumulés</span>
+          <span class="badge badge-green">🎓 Licence 3 Informatique</span>
+          <span class="badge badge-default">🚀 Stage Devadory 2026</span>
+        </div>
+        <div class="header-contacts">
+          <span>📍 Toulouse, France</span>
+          <span>📞 +33 6 21 58 99 88</span>
+          <span>✉️ nebieizidinemagid@gmail.com</span>
+          <span>🚗 Permis B (Véhiculé)</span>
+        </div>
+        <div class="header-links">
+          <a href="https://www.linkedin.com/in/izidine-nebie-483487349/" class="hlink hlink-purple" target="_blank">💼 LinkedIn</a>
+          <a href="https://github.com/Izidine226" class="hlink hlink-cyan" target="_blank">🐙 GitHub</a>
+          <a href="https://izidine-nebie.vercel.app/" class="hlink hlink-amber" target="_blank">🌐 Portfolio</a>
+          <a href="https://assistant-job.vercel.app/" class="hlink hlink-green" target="_blank">🤖 Simulateur IA</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══ OBJECTIVE ═══ -->
+  <div class="objective">
+    🎯 <strong>Objectif :</strong> Étudiant en L3 Informatique, je recherche une <strong>alternance à partir de septembre 2026</strong> en développement Full Stack / IA. Fort d'un stage chez Devadory et +120 000 abonnés cumulés, j'apporte une vision unique à la croisée de la tech et du digital.
+  </div>
+
+  <!-- ═══ BODY ═══ -->
+  <div class="body">
+
+    <!-- ═══ MAIN ═══ -->
+    <main class="main">
+
+      <!-- Expériences -->
+      <div class="section">
+        <div class="section-title">Expériences Professionnelles</div>
+
+        <div class="exp exp-purple">
+          <div class="exp-header">
+            <span class="exp-role">🤖 Développeur IA &amp; Solutions Digitales</span>
+            <span class="exp-period">Avril 2026 – Actuellement</span>
+          </div>
+          <div class="exp-company"><strong>Devadory</strong> · Stage · France</div>
+          <ul class="exp-points">
+            <li>Studio vidéo 100% automatisé via API Kling AI (Multi-shot, clonage vocal, synchronisation labiale)</li>
+            <li>Architecture Full-Stack : Next.js, TypeScript, Supabase (Middleware / PostgreSQL), Docker, Python, Go</li>
+            <li>Growth Hacking : lancement et gestion de chaînes TikTok pour accélération de l'acquisition client</li>
+            <li>Ingénierie de prompt avancée pour transformer des requêtes texte en vidéos montées</li>
+          </ul>
+        </div>
+
+        <div class="exp exp-pink">
+          <div class="exp-header">
+            <span class="exp-role">📱 Stratège Social Media &amp; Créateur de Contenu</span>
+            <span class="exp-period">2023 – Actuellement</span>
+          </div>
+          <div class="exp-company"><strong>Indépendant</strong> · Freelance</div>
+          <ul class="exp-points">
+            <li>Construction de communautés cumulant <strong>+120 000 abonnés</strong> (TikTok, YouTube Shorts, Instagram Reels)</li>
+            <li>Automatisation &amp; Storytelling IA (100k+ abonnés) · Personal Branding à fort engagement (20k+)</li>
+            <li>Scripts optimisés pour rétention maximale et conformité aux algorithmes de modération</li>
+          </ul>
+        </div>
+
+        <div class="exp exp-cyan">
+          <div class="exp-header">
+            <span class="exp-role">📄 Stagiaire – Gestion &amp; Outils Numériques</span>
+            <span class="exp-period">05/2023 – 06/2023</span>
+          </div>
+          <div class="exp-company"><strong>CCAS de Colomiers</strong> · Stage · France</div>
+          <ul class="exp-points">
+            <li>Traitement numérique des données, tri et organisation des dossiers administratifs</li>
+            <li>Accompagnement du public · Utilisation des systèmes d'information professionnels</li>
+          </ul>
+        </div>
+
+        <div class="exp exp-green">
+          <div class="exp-header">
+            <span class="exp-role">🍔 Équipier Polyvalent</span>
+            <span class="exp-period">2022 – 2025</span>
+          </div>
+          <div class="exp-company"><strong>McDonald's</strong> · Job étudiant · Toulouse</div>
+          <ul class="exp-points">
+            <li>Gestion du stress en forte affluence · Rigueur et coordination en équipe</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Projets -->
+      <div class="section">
+        <div class="section-title">Projets Clés</div>
+        <div class="proj-grid">
+
+          <div class="proj">
+            <div class="proj-header">
+              <div class="proj-title">🎬 Studio Vidéo IA Automatisé</div>
+              <span style="font-size:0.55rem;color:#10b981;font-weight:700;">En cours</span>
+            </div>
+            <div class="proj-desc">Pipeline 100% auto de production vidéo cinématique — Devadory.</div>
+            <div class="tags">
+              <span class="tag tag-p">Next.js</span><span class="tag tag-p">TypeScript</span>
+              <span class="tag tag-c">Supabase</span><span class="tag tag-a">Kling AI</span>
+              <span class="tag tag-c">Docker</span>
+            </div>
+          </div>
+
+          <div class="proj">
+            <div class="proj-header">
+              <div class="proj-title">🎯 TikTok Creator Agent (n8n)</div>
+            </div>
+            <div class="proj-desc">Agent IA : analyse vidéos /10, génère scripts, calendriers, exporte en PDF.</div>
+            <div class="tags">
+              <span class="tag tag-g">n8n</span><span class="tag tag-a">OpenAI GPT-4o</span>
+              <span class="tag tag-c">SerpAPI</span><span class="tag tag-p">JavaScript</span>
+            </div>
+          </div>
+
+          <div class="proj">
+            <div class="proj-header">
+              <div class="proj-title">🤖 Simulateur d'Entretien IA</div>
+              <a href="https://assistant-job.vercel.app/" class="proj-link" target="_blank">🔗 Démo</a>
+            </div>
+            <div class="proj-desc">Outil vocal 100% IA simulant un recruteur. Auth JWT, MySQL déployé Railway.</div>
+            <div class="tags">
+              <span class="tag tag-p">Node.js</span><span class="tag tag-p">Express</span>
+              <span class="tag tag-c">MySQL</span><span class="tag tag-a">OpenAI API</span>
+            </div>
+          </div>
+
+          <div class="proj">
+            <div class="proj-header">
+              <div class="proj-title">🃏 League Of Stones</div>
+              <a href="https://mi-git.univ-tlse2.fr/projet_web/projet_web" class="proj-link" target="_blank">🔗 GitLab</a>
+            </div>
+            <div class="proj-desc">Jeu de cartes web (Hearthstone × LoL) — React, Express, MongoDB.</div>
+            <div class="tags">
+              <span class="tag tag-k">React</span><span class="tag tag-p">Express</span>
+              <span class="tag tag-g">MongoDB</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Formation -->
+      <div class="section">
+        <div class="section-title">Formation</div>
+        <div class="edu-grid">
+          <div class="edu-card">
+            <div class="edu-period">2025 – 2026</div>
+            <div class="edu-degree">Licence 3 Informatique</div>
+            <div class="edu-school">Université Toulouse – Jean Jaurès</div>
+          </div>
+          <div class="edu-card">
+            <div class="edu-period">2023 – 2025</div>
+            <div class="edu-degree">L1 &amp; L2 MIASHS</div>
+            <div class="edu-school">Université Toulouse – Jean Jaurès</div>
+          </div>
+          <div class="edu-card">
+            <div class="edu-period">2022</div>
+            <div class="edu-degree">Baccalauréat Scientifique</div>
+            <div class="edu-school">Complexe Scolaire Horizon Intl.</div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- ═══ SIDEBAR ═══ -->
+    <aside class="side">
+
+      <!-- Profil -->
+      <div class="side-section">
+        <div class="side-title">Profil</div>
+        <p class="profil-text">
+          Étudiant en L3 Informatique, je construis des pipelines IA, des apps Full Stack et des médias viraux (<strong>+120k abonnés</strong>). Je recherche une <strong>alternance</strong> à partir de septembre 2026.
+        </p>
+      </div>
+
+      <!-- Stats -->
+      <div class="side-section">
+        <div class="side-title">En chiffres</div>
+        <div class="stat-grid">
+          <div class="stat-box"><div class="stat-val">120k+</div><div class="stat-lbl">Abonnés cumulés</div></div>
+          <div class="stat-box"><div class="stat-val">10+</div><div class="stat-lbl">Projets réalisés</div></div>
+          <div class="stat-box"><div class="stat-val">3</div><div class="stat-lbl">Ans de code</div></div>
+          <div class="stat-box"><div class="stat-val">5+</div><div class="stat-lbl">Outils IA</div></div>
+        </div>
+      </div>
+
+      <!-- Stack -->
+      <div class="side-section">
+        <div class="side-title">Stack Technique</div>
+        <div class="skill-group">
+          <div class="skill-group-name">Front-End</div>
+          <div class="pills">
+            <span class="pill pill-p">Next.js</span><span class="pill pill-p">React</span>
+            <span class="pill pill-p">TypeScript</span><span class="pill pill-d">Tailwind</span>
+            <span class="pill pill-d">HTML/CSS</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-name">Back-End &amp; DB</div>
+          <div class="pills">
+            <span class="pill pill-d">Node.js</span><span class="pill pill-c">Supabase</span>
+            <span class="pill pill-c">PostgreSQL</span><span class="pill pill-g">MongoDB</span>
+            <span class="pill pill-c">MySQL</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-name">IA &amp; Automatisation</div>
+          <div class="pills">
+            <span class="pill pill-a">OpenAI API</span><span class="pill pill-a">n8n</span>
+            <span class="pill pill-a">Kling AI</span><span class="pill pill-d">Python</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-name">DevOps &amp; Autres</div>
+          <div class="pills">
+            <span class="pill pill-d">Docker</span><span class="pill pill-d">Git/GitHub</span>
+            <span class="pill pill-d">Java</span><span class="pill pill-d">C++</span>
+            <span class="pill pill-d">Go</span><span class="pill pill-d">PHP</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-name">Marketing &amp; Growth</div>
+          <div class="pills">
+            <span class="pill pill-k">TikTok</span><span class="pill pill-k">Reels</span>
+            <span class="pill pill-k">Shorts</span><span class="pill pill-k">Growth Hack</span>
+            <span class="pill pill-d">Canva</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Langues -->
+      <div class="side-section">
+        <div class="side-title">Langues</div>
+        <div class="lang">
+          <div class="lang-row"><span class="lang-name">Français</span><span class="lang-lvl">Courant</span></div>
+          <div class="lang-bar"><div class="lang-fill fill-p" style="width:100%"></div></div>
+        </div>
+        <div class="lang">
+          <div class="lang-row"><span class="lang-name">Anglais</span><span class="lang-lvl">Intermédiaire</span></div>
+          <div class="lang-bar"><div class="lang-fill fill-c" style="width:70%"></div></div>
+        </div>
+        <div class="lang">
+          <div class="lang-row"><span class="lang-name">Mooré / Dioula</span><span class="lang-lvl">Natif</span></div>
+          <div class="lang-bar"><div class="lang-fill fill-a" style="width:100%"></div></div>
+        </div>
+      </div>
+
+      <!-- Intérêts -->
+      <div class="side-section">
+        <div class="side-title">Intérêts</div>
+        <div class="pills" style="gap:3px;">
+          <span class="int-pill">⚽ Football</span>
+          <span class="int-pill">♟️ Échecs</span>
+          <span class="int-pill">🎮 Gaming</span>
+          <span class="int-pill">🤖 Création IA</span>
+          <span class="int-pill">💡 Entrepreneuriat</span>
+          <span class="int-pill">📡 Veille Tech</span>
+        </div>
+      </div>
+
+    </aside>
+  </div>
+</div>
+</body>
+</html>

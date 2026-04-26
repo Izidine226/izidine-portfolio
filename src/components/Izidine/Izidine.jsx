@@ -4,7 +4,6 @@ import { Link } from 'react-scroll';
 import { TypeAnimation } from 'react-type-animation';
 import { FiArrowDown, FiGithub, FiLinkedin, FiTwitter } from 'react-icons/fi';
 import './Izidine.css';
-import Hero3D from './Hero3D';
 
 const socialLinks = [
   { icon: <FiGithub size={20} />, href: 'https://github.com/Izidine226', label: 'GitHub', id: 'social-github' },
@@ -63,7 +62,7 @@ export default function Izidine() {
       }
     }
 
-    for (let i = 0; i < 80; i++) {
+    for (let i = 0; i < 35; i++) {
       particles.push(new Particle());
     }
 
@@ -101,9 +100,6 @@ export default function Izidine() {
     <section id="Izidine" className="Izidine">
       {/* Canvas Particles */}
       <canvas ref={canvasRef} className="Izidine__canvas" />
-
-      {/* 3D Background Object (Small, low opacity) */}
-      <Hero3D />
 
       {/* Glow Orbs */}
       <div className="Izidine__orb Izidine__orb--1" />
