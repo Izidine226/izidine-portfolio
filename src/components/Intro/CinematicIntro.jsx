@@ -137,7 +137,7 @@ export default function CinematicIntro({ onComplete }) {
                       </div>
                       <div className="ci-terminal__line">
                         <span className="ci-prompt">{'>'}</span>
-                        <span className="ci-cmd"> Dev Full Stack Junior & Intégrateur IA</span>
+                        <span className="ci-cmd"> Dev Full Stack · Intégrateur IA · Créateur (120k+)</span>
                       </div>
                       {phase === 'zoom' && (
                         <motion.div

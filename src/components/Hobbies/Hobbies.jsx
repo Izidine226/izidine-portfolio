@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { FaFutbol, FaChessKnight, FaGamepad, FaFilm, FaBook } from 'react-icons/fa';
+import { FaFutbol, FaChessKnight, FaGamepad, FaFilm, FaBook, FaRobot, FaLightbulb, FaBullhorn } from 'react-icons/fa';
 import './Hobbies.css';
 
 const hobbies = [
@@ -38,6 +38,27 @@ const hobbies = [
     description: "Apprentissage continu et découverte de nouveaux univers.",
     icon: <FaBook />,
     color: '#f59e0b'
+  },
+  {
+    id: 'h6',
+    title: 'Création de Contenu IA',
+    description: "Construire des médias viraux grâce à l'automatisation et à l'IA générative. +120k abonnés cumulés.",
+    icon: <FaRobot />,
+    color: '#8b5cf6'
+  },
+  {
+    id: 'h7',
+    title: 'Entrepreneuriat',
+    description: "Concevoir des projets à impact, tester des idées et construire quelque chose de sa tête.",
+    icon: <FaLightbulb />,
+    color: '#f59e0b'
+  },
+  {
+    id: 'h8',
+    title: 'Veille Tech & IA',
+    description: "Suivre les dernières tendances IA, tester de nouveaux outils et toujours avoir un temps d'avance.",
+    icon: <FaBullhorn />,
+    color: '#06b6d4'
   }
 ];
 

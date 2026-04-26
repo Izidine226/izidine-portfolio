@@ -17,13 +17,14 @@ export default function Footer() {
               <span className="footer__logo-bracket">/&gt;</span>
             </Link>
             <p className="footer__tagline">
-              Construire l'avenir numérique, <br />
-              une ligne de code à la fois.
+              Dev Full Stack · Intégrateur IA<br />
+              Créateur de contenu (120k+)
             </p>
             <div className="footer__socials">
               {[
                 { icon: <FiGithub size={18} />, href: 'https://github.com/Izidine226', id: 'footer-github', label: 'GitHub' },
                 { icon: <FiLinkedin size={18} />, href: 'https://www.linkedin.com/in/izidine-nebie-483487349?utm_source=share_via&utm_content=profile&utm_medium=member_ios', id: 'footer-linkedin', label: 'LinkedIn' },
+                { icon: <FiTwitter size={18} />, href: 'https://tiktok.com', id: 'footer-tiktok', label: 'TikTok' },
               ].map(s => (
                 <a
                   key={s.id}
@@ -57,7 +58,7 @@ export default function Footer() {
             <div className="footer__links-col">
               <h4 className="footer__links-title">Stack</h4>
               <ul className="footer__links-list">
-                {['React', 'Node.js', 'TypeScript', 'Python', 'Docker', 'AWS'].map(tech => (
+                {['Next.js', 'TypeScript', 'Supabase', 'n8n', 'OpenAI', 'Docker'].map(tech => (
                   <li key={tech}>
                     <span className="footer__link footer__link--muted">{tech}</span>
                   </li>

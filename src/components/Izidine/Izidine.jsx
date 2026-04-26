@@ -4,6 +4,7 @@ import { Link } from 'react-scroll';
 import { TypeAnimation } from 'react-type-animation';
 import { FiArrowDown, FiGithub, FiLinkedin, FiTwitter } from 'react-icons/fi';
 import './Izidine.css';
+import Hero3D from './Hero3D';
 
 const socialLinks = [
   { icon: <FiGithub size={20} />, href: 'https://github.com/Izidine226', label: 'GitHub', id: 'social-github' },
@@ -11,10 +12,10 @@ const socialLinks = [
 ];
 
 const floatingTags = [
-  { text: 'React', top: '15%', left: '8%', delay: 0 },
-  { text: 'Node.js', top: '28%', right: '6%', delay: 0.4 },
+  { text: 'Next.js', top: '15%', left: '8%', delay: 0 },
+  { text: 'n8n · IA', top: '28%', right: '6%', delay: 0.4 },
   { text: 'TypeScript', bottom: '35%', left: '5%', delay: 0.8 },
-  { text: 'Python', bottom: '20%', right: '8%', delay: 1.2 },
+  { text: '120k Abonnés', bottom: '20%', right: '8%', delay: 1.2 },
 ];
 
 export default function Izidine() {
@@ -101,6 +102,9 @@ export default function Izidine() {
       {/* Canvas Particles */}
       <canvas ref={canvasRef} className="Izidine__canvas" />
 
+      {/* 3D Background Object (Small, low opacity) */}
+      <Hero3D />
+
       {/* Glow Orbs */}
       <div className="Izidine__orb Izidine__orb--1" />
       <div className="Izidine__orb Izidine__orb--2" />
@@ -177,13 +181,15 @@ export default function Izidine() {
             <span className="Izidine__type-prefix">Je suis </span>
             <TypeAnimation
               sequence={[
-                'Développeur Full Stack junior',
+                'Développeur Full Stack',
                 2000,
-                'Intégrateur IA passionné',
+                'Intégrateur IA & Automatisation',
                 2000,
-                'Créateur de solutions',
+                'Créateur de Contenu (120k+)',
                 2000,
-                'Passionné de tech',
+                'Stratège Social Media',
+                2000,
+                'Passionné de tech & IA',
                 2000,
               ]}
               wrapper="span"
@@ -199,9 +205,9 @@ export default function Izidine() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 0.7 }}
           >
-            Je conçois et développe des applications web modernes,
-            en combinant mon profil Full Stack avec l'intégration d'intelligences artificielles.
-            Transformons vos idées en réalité digitale augmentée.
+            Développeur Full Stack & Intégrateur IA, je construis des pipelines d'automatisation,
+            des agents intelligents et des applications web modernes. Créateur de contenu avec
+            +120 000 abonnés cumulés — je marie la tech et la viralité pour créer un impact réel.
           </motion.p>
 
           <motion.div
@@ -229,8 +235,8 @@ export default function Izidine() {
             transition={{ delay: 1.2, duration: 0.7 }}
           >
             {[
-              { value: '1+', label: 'An d\'expérience' },
-              { value: '15+', label: 'Projets réalisés' },
+              { value: '120k+', label: 'Abonnés cumulés' },
+              { value: '10+', label: 'Projets réalisés' },
               { value: '100%', label: 'Passion IA' },
             ].map((stat, i) => (
               <div key={i} className="Izidine__stat">

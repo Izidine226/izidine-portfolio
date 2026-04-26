@@ -2,9 +2,11 @@ import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import {
   SiReact, SiNodedotjs, SiPython, SiMongodb, SiPostgresql, SiDocker, SiGit, SiTailwindcss,
-  SiJavascript, SiHtml5, SiCss, SiExpress, SiMysql, SiPhp, SiCplusplus
+  SiJavascript, SiHtml5, SiCss, SiExpress, SiMysql, SiPhp, SiCplusplus,
+  SiTypescript, SiNextdotjs, SiSupabase, SiN8N, SiGo, SiOpenai,
+  SiTiktok, SiInstagram, SiYoutube, SiCanva, SiGoogleanalytics, SiMeta, SiFigma
 } from 'react-icons/si';
-import { FaJava } from 'react-icons/fa';
+import { FaJava, FaRobot, FaChartLine, FaBullhorn } from 'react-icons/fa';
 import './Skills.css';
 
 const skillCategories = [
@@ -13,7 +15,9 @@ const skillCategories = [
     color: '#8b5cf6',
     skills: [
       { name: 'JavaScript', icon: <SiJavascript />, level: 90 },
+      { name: 'TypeScript', icon: <SiTypescript />, level: 80 },
       { name: 'React.js', icon: <SiReact />, level: 85 },
+      { name: 'Next.js', icon: <SiNextdotjs />, level: 78 },
       { name: 'Tailwind CSS', icon: <SiTailwindcss />, level: 85 },
       { name: 'HTML5', icon: <SiHtml5 />, level: 95 },
       { name: 'CSS3', icon: <SiCss />, level: 90 },
@@ -25,21 +29,46 @@ const skillCategories = [
     skills: [
       { name: 'Node.js', icon: <SiNodedotjs />, level: 85 },
       { name: 'Express.js', icon: <SiExpress />, level: 80 },
-      { name: 'MongoDB', icon: <SiMongodb />, level: 85 },
+      { name: 'Supabase', icon: <SiSupabase />, level: 75 },
+      { name: 'PostgreSQL', icon: <SiPostgresql />, level: 78 },
+      { name: 'MongoDB', icon: <SiMongodb />, level: 80 },
       { name: 'MySQL', icon: <SiMysql />, level: 80 },
-      { name: 'PostgreSQL', icon: <SiPostgresql />, level: 75 },
     ],
   },
   {
-    name: 'Classique & DevOps',
+    name: 'IA & Automatisation',
+    color: '#f59e0b',
+    skills: [
+      { name: 'OpenAI API', icon: <SiOpenai />, level: 82 },
+      { name: 'n8n', icon: <SiN8N />, level: 80 },
+      { name: 'Prompt Engineering', icon: <FaRobot />, level: 85 },
+      { name: 'Python', icon: <SiPython />, level: 85 },
+      { name: 'Go', icon: <SiGo />, level: 60 },
+    ],
+  },
+  {
+    name: 'DevOps & Outils',
     color: '#ec4899',
     skills: [
-      { name: 'Java', icon: <FaJava />, level: 80 },
-      { name: 'C++', icon: <SiCplusplus />, level: 75 },
-      { name: 'Python', icon: <SiPython />, level: 85 },
-      { name: 'PHP', icon: <SiPhp />, level: 70 },
       { name: 'Docker', icon: <SiDocker />, level: 80 },
       { name: 'Git & Github', icon: <SiGit />, level: 90 },
+      { name: 'Java', icon: <FaJava />, level: 80 },
+      { name: 'C++', icon: <SiCplusplus />, level: 75 },
+      { name: 'PHP', icon: <SiPhp />, level: 70 },
+    ],
+  },
+  {
+    name: 'Marketing & Growth',
+    color: '#10b981',
+    skills: [
+      { name: 'TikTok', icon: <SiTiktok />, level: 92 },
+      { name: 'Instagram / Reels', icon: <SiInstagram />, level: 88 },
+      { name: 'YouTube Shorts', icon: <SiYoutube />, level: 85 },
+      { name: 'Meta Ads', icon: <SiMeta />, level: 70 },
+      { name: 'Google Analytics', icon: <SiGoogleanalytics />, level: 72 },
+      { name: 'Canva / Design', icon: <SiCanva />, level: 80 },
+      { name: 'Script & Storytelling', icon: <FaBullhorn />, level: 90 },
+      { name: 'Growth Hacking', icon: <FaChartLine />, level: 85 },
     ],
   },
 ];

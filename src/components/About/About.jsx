@@ -6,23 +6,23 @@ import './About.css';
 const traits = [
   {
     icon: <FiCode size={22} />,
-    title: 'Clean Code',
-    desc: 'J\'écris du code lisible, maintenable et performant suivant les meilleures pratiques.',
-  },
-  {
-    icon: <FiLayers size={22} />,
-    title: 'Architecture',
-    desc: 'Je conçois des architectures scalables et robustes pour des applications modernes.',
+    title: 'Dev Full Stack',
+    desc: 'Je construis des apps web modernes de bout en bout avec Next.js, TypeScript et Supabase.',
   },
   {
     icon: <FiZap size={22} />,
-    title: 'Performance',
-    desc: 'L\'optimisation est au cœur de mon travail pour une expérience utilisateur fluide.',
+    title: 'IA & Automatisation',
+    desc: 'Je conçois des pipelines d\'automatisation et des agents IA (n8n, OpenAI, Kling AI).',
+  },
+  {
+    icon: <FiLayers size={22} />,
+    title: 'Créateur de Contenu',
+    desc: '+120 000 abonnés cumulés. Je maîtrise les algorithmes TikTok, Shorts et Reels.',
   },
   {
     icon: <FiHeart size={22} />,
-    title: 'Passion',
-    desc: 'Chaque ligne de code est une opportunité d\'innover et de créer quelque chose d\'unique.',
+    title: 'Impact Réel',
+    desc: 'Je marie la tech et la viralité pour créer des produits qui ont un impact concret.',
   },
 ];
 
@@ -84,13 +84,14 @@ export default function About() {
               </div>
               <pre className="about__code-content">
                 <code>
-                  {`const developer = {
-  name: "Izidine",
-  role: "Dev Junior & IA",
+                  {`const izidine = {
+  name: "Izidine Nébié",
+  role: "Dev Full Stack & IA",
   location: "Toulouse, France 🇫🇷",
-  mobility: "Permis B + Véhicule",
-  skills: ["React", "Node", "Python"],
-  passion: "Créer l'impossible"
+  stage: "Devadory (2026)",
+  creator: "+120k abonnés cumulés",
+  stack: ["Next.js", "n8n", "OpenAI"],
+  passion: "Tech + viralité"
 };`}
                 </code>
               </pre>
@@ -108,21 +109,23 @@ export default function About() {
             <motion.div variants={itemVariants}>
               <div className="section-tag">À propos</div>
               <h2 className="section-title">
-                Développeur passionné,<br />
-                <span className="gradient-text">créateur de solutions</span>
+                Développeur & Créateur,<br />
+                <span className="gradient-text">IA et viralité</span>
               </h2>
             </motion.div>
 
             <motion.p className="about__text" variants={itemVariants}>
-              En tant que développeur Full Stack junior et intégrateur IA passionné, je me spécialise
-              dans la création d'applications web modernes augmentées par l'intelligence artificielle.
-              Mon approche combine les dernières technologies web avec les outils IA pour construire
-              des produits innovants qui repoussent les limites.
+              Développeur Full Stack & Intégrateur IA en stage chez <strong>Devadory</strong>, je construis
+              des pipelines vidéo automatisés, des agents IA et des applications web modernes avec
+              Next.js, TypeScript, Supabase et Docker. Je transforme les idées en produits qui tournent
+              vraiment.
             </motion.p>
 
             <motion.p className="about__text" variants={itemVariants}>
-              Ma règle d'or : écrire un code propre, clair et sans prise de tête. Prêt à rejoindre une équipe pour relever de nouveaux défis ! Je maîtrise aussi bien le front-end que le back-end,
-              avec une expertise particulière en React, Node.js et architecture cloud.
+              Mais je ne suis pas que dev : créateur de contenu avec <strong>+120 000 abonnés cumulés</strong>,
+              je maîtrise les algorithmes TikTok, YouTube Shorts et Reels. Je sais comment écrire des
+              scripts qui accrochent, comment la tech peut amplifier la viralité — et je mets
+              les deux ensemble.
             </motion.p>
 
             {/* Traits Grid */}

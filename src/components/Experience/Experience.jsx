@@ -5,6 +5,40 @@ import './Experience.css';
 
 const experiences = [
   {
+    id: 'exp-0',
+    period: 'Avril 2026 – Actuellement',
+    role: 'Développeur IA & Solutions Digitales',
+    company: 'Devadory',
+    location: 'France',
+    type: 'Stage',
+    color: '#f59e0b',
+    emoji: '🤖',
+    description: 'Conception et automatisation d\'un pipeline de production vidéo via Next.js, Supabase et Docker. Développement de solutions Full-Stack performantes.',
+    highlights: [
+      'Architecture Full-Stack (Next.js, TypeScript, Supabase)',
+      'Conteneurisation via Docker et micro-services Python/Go',
+      'Intégration d\'API de génération vidéo (Kling AI) et synchronisation labiale',
+      'Growth Hacking & Stratégie de Contenu TikTok'
+    ],
+  },
+  {
+    id: 'exp-0b',
+    period: '2023 – Actuellement',
+    role: 'Stratège Social Media & Créateur de Contenu',
+    company: 'Indépendant',
+    location: 'France',
+    type: 'Freelance',
+    color: '#ec4899',
+    emoji: '📱',
+    description: 'Développement de communautés cumulant +120 000 abonnés via du storytelling IA, du personal branding et une expertise approfondie des algorithmes de viralité.',
+    highlights: [
+      'Automatisation & Storytelling (100k+ abonnés) : Médias narratifs génération IA',
+      'Personal Branding (20k+ abonnés) : Fort taux d\'engagement',
+      'Scripts optimisés pour rétention maximale & conformité algorithmes',
+      'Expertise algorithmique : TikTok, YouTube Shorts, Reels',
+    ],
+  },
+  {
     id: 'exp-1',
     period: '2022 – 2025',
     role: 'Équipier Polyvalent',

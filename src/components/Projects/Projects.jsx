@@ -5,6 +5,48 @@ import './Projects.css';
 
 const projects = [
   {
+    id: 'proj-0',
+    title: 'Studio Vidéo IA Automatisé 🚧',
+    category: 'Automatisation',
+    tags: ['Next.js', 'TypeScript', 'Supabase', 'PostgreSQL', 'Docker', 'Python', 'Go', 'Tailwind CSS'],
+    description: 'Pipeline 100% automatisé pour générer des vidéos cinématiques & dynamiques via Next.js, Supabase et Docker. (En cours – Stage Devadory)',
+    longDesc: 'Conception d\'un studio vidéo entièrement automatisé chez Devadory utilisant une stack moderne : Next.js, TypeScript et Supabase (Middleware/PostgreSQL). Le pipeline couple des API de génération d\'images et de vidéos (Kling AI) orchestrées par Docker et des services en Python/Go. Intégration de flux complexes de clonage vocal et synchronisation labiale. Gestion de la stratégie de contenu TikTok pour l\'acquisition client.',
+    color: '#f59e0b',
+    gradient: 'linear-gradient(135deg, #f59e0b 0%, #ef4444 100%)',
+    emoji: '🎬',
+    live: '#',
+    github: '#',
+    featured: true,
+  },
+  {
+    id: 'proj-0b',
+    title: 'TikTok Creator Assistant 🤖',
+    category: 'Automatisation',
+    tags: ['n8n', 'OpenAI API', 'GPT-4o-mini', 'SerpAPI', 'JavaScript', 'Prompt Engineering'],
+    description: 'Agent IA conversationnel sur n8n qui aide les créateurs TikTok à analyser leur contenu, détecter les tendances et générer des scripts avec export PDF.',
+    longDesc: 'Agent IA complet construit sur n8n aidant les créateurs TikTok à booster leur audience. Analyse les vidéos avec un diagnostic noté /10, détecte les tendances en temps réel via SerpAPI, génère des scripts complets avec indications de montage, calcule les revenus potentiels et crée des calendriers éditoriaux personnalisés. Adapte automatiquement le contenu pour YouTube Shorts, Reels et LinkedIn.\n\nArchitecture : Chat Trigger → AI Agent (GPT-4o-mini) + 4 outils (SerpAPI, HTTP Request, Code Tool, Vision IA) + Mémoire conversationnelle + Export PDF automatique.',
+    color: '#06b6d4',
+    gradient: 'linear-gradient(135deg, #06b6d4 0%, #8b5cf6 100%)',
+    emoji: '🎯',
+    live: '#',
+    github: '#',
+    featured: true,
+  },
+  {
+    id: 'proj-0c',
+    title: 'Média IA & Personal Branding 📱',
+    category: 'Automatisation',
+    tags: ['TikTok', 'YouTube Shorts', 'IA Générative', 'Storytelling', 'Script Writing', 'Growth Hacking'],
+    description: 'Création de plusieurs médias viraux cumulant +120 000 abonnés : fictions vidéo générées par IA (100k+) et personal branding à fort engagement (20k+).',
+    longDesc: 'Construction from scratch de plusieurs communautés cumulant +120 000 abonnés :\n\n🎬 Automatisation & Storytelling (100k+ abonnés) : Création d\'un média narratif basé sur des fictions vidéo entièrement générées par l\'IA générative.\n\n👤 Personal Branding (20k+ abonnés) : Réalisation et montage d\'une chaîne incarnée avec un fort taux d\'engagement.\n\n🧠 Expertise Algorithmique : Scripts optimisés avec vocabulaire accessible et situations universelles pour maximiser la rétention et contourner les filtres de modération. Maîtrise des algorithmes TikTok, YouTube Shorts et Instagram Reels.',
+    color: '#ec4899',
+    gradient: 'linear-gradient(135deg, #ec4899 0%, #f59e0b 100%)',
+    emoji: '🚀',
+    live: '#',
+    github: '#',
+    featured: true,
+  },
+  {
     id: 'proj-1',
     title: 'Simulateur d\'Entretien IA',
     category: 'IA',
@@ -118,7 +160,7 @@ const projects = [
   },
 ];
 
-const filters = ['Tous', 'Web', 'IA', 'Logiciel', 'Data Science', 'IoT', 'Startup'];
+const filters = ['Tous', 'Automatisation', 'Web', 'IA', 'Logiciel', 'Data Science', 'IoT', 'Startup'];
 
 function ProjectModal({ project, onClose }) {
   return (
