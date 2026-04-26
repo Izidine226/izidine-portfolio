@@ -6,7 +6,7 @@ import './Experience.css';
 const experiences = [
   {
     id: 'exp-0',
-    period: 'Avril 2026 – Actuellement',
+    period: '3 Avril 2026 – Actuellement',
     role: 'Développeur IA & Solutions Digitales',
     company: 'Devadory',
     location: 'France',
